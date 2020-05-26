@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+/*This is used to prevent the browser from scolling right*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*This is another way of preventing the browser from scrolling right.*/
+/*swap with the first to see effect*/
+/* html, body { 
+    max-width: 100vw;
+    overflow-x: hidden; 
+} */
+
+/*This is the body of the html document*/
+body{
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    background-size: 1000% 100%;
+    font-family: 'Poppins', sans-serif;
+}
+/*Style for the navigation bar*/
+.navbar{
+    display: grid;
+    width: 100%;
+    padding: 0 40px;
+    background-color: black;
+   grid-auto-flow: column;
+    grid-gap: 10px;
+    color: whitesmoke;
+    box-shadow: 0px 10px 10px  gray;
+   
+}
+/*This is for the logo*/
+.logo img{
+    width: 85px;
+}
+.logo{
+    display: grid;
+    justify-content: start;
+    align-content: center;
+    padding: 0 2px;
+}
+/*This represents the links in the navigation bar(nav bar)*/
+.links ul{
+    display: grid;
+    justify-content: space-around ;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    line-height: 85px;
+}
+
+.links ul{
+    list-style: none;
+}
+.links a {
+    text-decoration: none;
+    line-height: 87px;
+    color: white;
+}
+/*Styling for the button*/
+button{
+    padding: 9px 25px;
+    background: linear-gradient(to right,#7E0F4B, #1A5865); 
+    border: none;
+    width: 100px;
+    border-radius: 50px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition-property: background,width, height;
+    transition: 1s,2s, 2s;
+    font-family: 'Poppins', sans-serif;
+   
+}
+/*This is for the effect we see*/
+button:hover{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #7E0F4B, #1A5865);
+    width: 150px;
+    height: 50px;
+}
+/*This is the content of the page*/
+.main-content{
+    position: absolute;
+    padding-right: 30px;
+    padding-left: 30px;
+    width: 500px;
+   margin: 20px 20px;
+    border: 1px solid black;
+    height: 150vh;
+    border-radius: 20px;
+    background-color: black;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-content h1{
+    padding-top: 40px;
+    color: white;
+    text-align:center ;
+    font-size: 3em;
+}
+.main-content p{
+    color: white;
+    text-align: center;
+}
+.bottom-txt{
+    font-size: 40px;
+}
+
+/* This is where we code our responsiveness */
+/* If you want me to cover this topic on my channel please drop a comment and i will work on it immediately */
+@media screen and (min-width: 1200px){
+    .navbar{
+        width: 100% ;
+     }
+     .cta{
+         padding-right: 40px ;
+     }
+     .main-content{
+         width: 70%;
+         right: 50%;
+         left: 50%;
+         transform: translateX(-50%);
+         height: 180vh;
+     }
+} 
+@media screen and (min-width: 992px){
+    .navbar{
+        width: 100% ;
+     }
+     .cta{
+         padding-right: 40px ;
+     }
+     .main-content{
+         width: 70%;
+         right: 50%;
+         left: 50%;
+         transform: translateX(-50%);
+         height: 180vh;
+     }
+}
+@media screen and (min-width: 769px){
+    .navbar{
+       width: 100% ;
+    }
+    .cta{
+        padding-right: 20px ;
+    }
+    .main-content{
+        width: 60%;
+        right: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 160vh;
+    }
+}
+
+@media screen and (max-width: 768px){
+     .navbar{
+        width: 90% ;
+     }
+     .cta{
+         padding-right: 20px ;
+     }
+     .main-content{
+         width: 60%;
+         right: 50%;
+         left: 50%;
+         transform: translateX(-50%);
+         height: 120vh;
+     }
+} 
+
+
